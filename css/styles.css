@@ -1,0 +1,27 @@
+.text {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 36px;
+  color: #f38181;
+}
+.effect {
+  position: relative;
+}
+.effect::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  background: #f38181;
+  transition: width 0.75s, left 0.75s;
+}
+
+.effect:hover::after {
+  width: 100%;
+  left: 0;
+}
